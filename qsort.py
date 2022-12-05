@@ -1,11 +1,8 @@
 from inspect import _void
-import random
 
 def quick_sort(li:list, start = 0, end = None):
     def partition(li, start, end):
         count = start
-        pivot_index = random.randint(start, end)
-        li[pivot_index], li[end] = li[end], li[pivot_index]
         piv = li[end]
         for i in range(start, end):
             if li[i] <= piv:
